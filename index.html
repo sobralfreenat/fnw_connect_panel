@@ -1,478 +1,167 @@
-<!-- //navigation bar html">--> 
 <!DOCTYPE html>
-<div style="padding-left:1px">
-<html>
+<html lang="pt-BR">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=5">
-<style>
-body {margin:1;}
-
-
-
-.navbar {
-  overflow: show;
-  background-color: #153e05;
-  opacity: 8%;
-  position: fixed;
-  top: 0;
-  width: 66px;
-  opacity: 48%;
-
-}
-
-.navbar a {
-  float: left;
-  display: block;
-  color: #00ffd2;
-  text-align: left;
-  padding: 14px 16px;
-  text-decoration: underline overline;
-  font-size: 14px;
-  opacity: 68%;
-}
-
-.navbar a:hover {
-  background: #263a1f;
-  color:  	#d6ff00;
-  text-shadow: 1px 1.3px #ffffff;
-    opacity: 89%;
-}
-
-.main {
-  padding: 16px;
-  margin-top: 90px;
-  height: 1500px; /* Used in this example to enable scrolling */
-
-}
-</style>
-
+    <style>
+        .campo-obrigatorio {
+            border: 2px solid red;
+        }
+        
+        /* Adicione aqui o código CSS que forneci anteriormente */
+        .secao {
+            padding: 15px; /* Adapte o valor conforme necessário */
+            margin-bottom: 20px; /* Adapte o valor conforme necessário */
+        }
+        .oculto {
+            display: none;
+        }
+        .chave {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 11px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+            opacity: 0.8;
+        }
+        .botao-chave {
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            opacity: 0.7;
+            height: auto;
+            position: fixed;
+        }
+    </style>
 </head>
 <body>
+    
+    <!-- Botão 1 -->
+    <button id="botao-chave1" class="botao-chave" style="bottom: 50px; right: calc(95% - 10*1vw);" onclick="toggleChave(1)">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65d82286182f9_viabilidde360source.png" alt="01" style="width: 40px; height: auto; margin-right: 5px;">
+    </button>
+    
+    <!-- Área para exibir a chave 1 (inicialmente oculta) -->
+    <div id="chave1" class="chave oculto" onclick="toggleChave(1)" style="bottom: 130px; right: calc(95% - 10*1vw);">
+        <iframe src="https://conteudo-connection.systeme.io/assessoria-viabilidade360" name="myiFrame" style="border: 0; width: 100%; height: 100%;"></iframe>
+    </div>
 
-<div class="navbar">
-  <a class="active" href="#top">LBM </a>
-  <a href="#FOCO">FOCO</a>
-  <a href="#ETO">ETO</a>
-  <a href="#TABS">TABS</a>
-  <a href="#SWOT">SWOT</a>
-  <a href="#CALL">CALL</a>
-  <a href="#PLANOS">Planos</a>
-  <a href="#PAGTO">Pagto</a>
+    <!-- Botão 2 -->
+    <button id="botao-chave2" class="botao-chave" style="bottom: 50px; right: calc(85% - 10*1vw);" onclick="toggleChave(2)">
+        <img src="URL_DA_IMAGEM2" alt="02" style="width: 70px; height: auto; margin-right: 5px;">
+    </button>
+    
+    <!-- Área para exibir a chave 2 (inicialmente oculta) -->
+    <div id="chave2" class="chave oculto" onclick="toggleChave(2)" style="bottom: 130px; right: calc(85% - 10*1vw);">
+        <iframe src="URL_DO_IFRAME2" name="myiFrame" style="border: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+    <!-- Repetir o padrão para os próximos botões -->
+    <!-- Botão 3 -->
+    <button id="botao-chave3" class="botao-chave" style="bottom: 50px; right: calc(75% - 10*1vw);" onclick="toggleChave(3)">
+        <img src="URL_DA_IMAGEM3" alt="03" style="width: 70px; height: auto; margin-right: 5px;">
+    </button>
+    
+    <!-- Área para exibir a chave 3 (inicialmente oculta) -->
+    <div id="chave3" class="chave oculto" onclick="toggleChave(3)" style="bottom: 130px; right: calc(75% - 10*1vw);">
+        <iframe src="URL_DO_IFRAME3" name="myiFrame" style="border: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+    
+    <!-- Botão 4 -->
+<button id="botao-chave4" class="botao-chave" style="bottom: 50px; right: calc(65% - 10*1vw);" onclick="toggleChave(4)">
+    <img src="URL_DA_IMAGEM4" alt="04" style="width: 70px; height: auto; margin-right: 5px;">
+</button>
+
+<!-- Área para exibir a chave 4 (inicialmente oculta) -->
+<div id="chave4" class="chave oculto" onclick="toggleChave(4)" style="bottom: 130px; right: calc(65% - 10*1vw);">
+    <iframe src="URL_DO_IFRAME4" name="myiFrame" style="border: 0; width: 100%; height: 100%;"></iframe>
 </div>
 
-<div style="padding-left:86px">
- <!-- // <h2>Top Navigation Example</h2><p>Some content..</p>
+<!-- Botão 5 -->
+<button id="botao-chave5" class="botao-chave" style="bottom: 50px; right: calc(55% - 10*1vw);" onclick="toggleChave(5)">
+    <img src="URL_DA_IMAGEM5" alt="05" style="width: 70px; height: auto; margin-right: 5px;">
+</button>
+
+<!-- Área para exibir a chave 5 (inicialmente oculta) -->
+<div id="chave5" class="chave oculto" onclick="toggleChave(5)" style="bottom: 130px; right: calc(55% - 10*1vw);">
+    <iframe src="URL_DO_IFRAME5" name="myiFrame" style="border: 0; width: 100%; height: 100%;"></iframe>
 </div>
 
-<!-- //</body>
-</html>">--> 
+<!-- Repetir o padrão para os próximos botões -->
 
+<!-- Botão 6 -->
+<button id="botao-chave6" class="botao-chave" style="bottom: 50px; right: calc(45% - 10*1vw);" onclick="toggleChave(6)">
+    <img src="URL_DA_IMAGEM6" alt="06" style="width: 70px; height: auto; margin-right: 5px;">
+</button>
 
-
-
-
-<!-- //fnwsession html">--> 
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-</head>
-<body>
-
-<!-- //link on page down">--> 
-
-<p>&nbsp;</p>
-
-<h2>FNW LBM SESSSION</h2>
-					
-				</div>
-			</div>
-            
-		</div>
-	</div>
-</section>
-<div style="padding-left:96px">
-<form action="/action_page.php"><label for="cliente">Cliente:</label> <select id="foco" name="foco"><option value="== Select ==r">== Select ==</option><option value="bonilhaligia655@gmail.com">bonilhaligia655@gmail.com</option><option value="____________">____________</option><option value="sobral.freenat@gmail.comr">sobral.freenat@gmail.com</option></select>
-
-<p>&nbsp;</p>
-
-<p><button onclick="document.getElementById('date_time_button').innerHTML = Date()" type="button">START SESSION.</button></p>
-
-<p id="date_time_button">&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<h3>Neg&oacute;cio / Empresa / Empres&aacute;rio(a) / Cargo / Pessoa&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h3>
-<label for="Negócio">Ecolha o foco:</label> <select id="foco" name="foco"><option value="Negócio">Neg&oacute;cio</option><option value="Empresa">Empresa</option><option value="Empresário(a)">Empres&aacute;rio(a)</option><option value="Cargo/ Profissão">Cargo/ Profiss&atilde;o</option><option value="Pessoa">Pessoa</option> </select> &gt;&nbsp;&nbsp;
-
-<p>&nbsp;</p>
-
-<p>___________</p>
-
-<p>&nbsp;</p>
-  
-
-
-<h3>Estrat&eacute;gia / T&aacute;tica / Opera&ccedil;&atilde;o</h3>
-<label for="ETO">Ecolha o foco:</label> <select id="foco" name="foco"><option value="Estratégia">Estrat&eacute;gia</option><option value="Tática">T&aacute;tica</option><option value="Operação">Opera&ccedil;&atilde;o</option> </select> &gt;</form>
-
-<p><br />
-<style type="text/css">#mydiv {
-  position: absolute;
-  z-index: 9;
-  background-color: #f1f1f1;
-  text-align: center;
-  border: 1px solid #d3d3d3;
-}
-
-#mydivheader {
-  padding: 10px;
-  cursor: move;
-  z-index: 10;
-  background-color: #1113;
-  color: #fff;
-}
-</style>
-</p>
-
-<div id="mydiv">
-<div id="mydivheader">=</div>
-
-<div> [drag] &nbsp;</div>
-
-<div>
-<form class="form" style="border: 2px dotted rgb(222, 0, 0); padding: 2px;">
-<div class="form-group"><textarea class="textarea" cols="52" rows="3" style="cursor: default;"></textarea></div>
-</form>
-</div>
+<!-- Área para exibir a chave 6 (inicialmente oculta) -->
+<div id="chave6" class="chave oculto" onclick="toggleChave(6)" style="bottom: 130px; right: calc(45% - 10*1vw);">
+    <iframe src="URL_DO_IFRAME6" name="myiFrame" style="border: 0; width: 100%; height: 100%;"></iframe>
 </div>
 
-<p>&nbsp;</p>
-</body>
-</html>
-<title></title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="./css/style.css" rel="stylesheet" />
-<form class="form">
-<div class="form-group"><textarea class="textarea" name="PRIORIDADE">PRIORIDADE
+<!-- Continuar o padrão para os próximos botões -->
 
--
+<!-- Botão 7 -->
+<button id="botao-chave7" class="botao-chave" style="bottom: 50px; right: calc(35% - 10*1vw);" onclick="toggleChave(7)">
+    <img src="URL_DA_IMAGEM7" alt="07" style="width: 70px; height: auto; margin-right: 5px;">
+</button>
 
--
+<!-- Área para exibir a chave 7 (inicialmente oculta) -->
+<div id="chave7" class="chave oculto" onclick="toggleChave(7)" style="bottom: 130px; right: calc(35% - 10*1vw);">
+    <iframe src="URL_DO_IFRAME7" name="myiFrame" style="border: 0; width: 100%; height: 100%;"></iframe>
+</div>
 
--
-  
-  </textarea>&nbsp;</div>
-</form>
-<title></title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="./css/style.css" rel="stylesheet" />
-<form class="form">
-<div class="form-group"><textarea class="textarea" name="TOPICOS">TOPICOS
+<!-- Botão 8 -->
+<button id="botao-chave8" class="botao-chave" style="bottom: 50px; right: calc(25% - 10*1vw);" onclick="toggleChave(8)">
+    <img src="URL_DA_IMAGEM8" alt="08" style="width: 70px; height: auto; margin-right: 5px;">
+</button>
 
--
+<!-- Área para exibir a chave 8 (inicialmente oculta) -->
+<div id="chave8" class="chave oculto" onclick="toggleChave(8)" style="bottom: 130px; right: calc(25% - 10*1vw);">
+    <iframe src="URL_DO_IFRAME8" name="myiFrame" style="border: 0; width: 100%; height: 100%;"></iframe>
+</div>
 
--
+<!-- Repetir o padrão para os próximos botões -->
 
--</textarea>&nbsp;</div>
-</form>
+<!-- Botão 9 -->
+<button id="botao-chave9" class="botao-chave" style="bottom: 50px; right: calc(15% - 10*1vw);" onclick="toggleChave(9)">
+    <img src="URL_DA_IMAGEM9" alt="09" style="width: 70px; height: auto; margin-right: 5px;">
+</button>
 
-<p><button onclick="document.getElementById('demo').innerHTML = Date()" type="button">SESSION END</button></p>
+<!-- Área para exibir a chave 9 (inicialmente oculta) -->
+<div id="chave9" class="chave oculto" onclick="toggleChave(9)" style="bottom: 130px; right: calc(15% - 10*1vw);">
+    <iframe src="URL_DO_IFRAME9" name="myiFrame" style="border: 0; width: 100%; height: 100%;"></iframe>
+</div>
 
-<p id="demo">&nbsp;</p>
-<script>
+<!-- Botão 10 -->
+<button id="botao-chave10" class="botao-chave" style="bottom: 50px; right: calc(5% - 10*1vw);" onclick="toggleChave(10)">
+    <img src="URL_DA_IMAGEM10" alt="10" style="width: 70px; height: auto; margin-right: 5px;">
+</button>
 
-//Make the DIV element draggagle:
-dragElement(document.getElementById("mydiv"));
+<!-- Área para exibir a chave 10 (inicialmente oculta) -->
+<div id="chave10" class="chave oculto" onclick="toggleChave(10)" style="bottom: 130px; right: calc(5% - 10*1vw);">
+    <iframe src="URL_DO_IFRAME10" name="myiFrame" style="border: 0; width: 100%; height: 100%;"></iframe>
+</div>
 
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    /* if present, the header is where you move the DIV from:*/
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    /* otherwise, move the DIV from anywhere inside the DIV:*/
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    /* stop moving when mouse button is released:*/
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
+<script>     
+   function toggleChave(numero) {
+        const chave = document.getElementById(`chave${numero}`);
+        if (chave.classList.contains('oculto')) {
+            chave.classList.remove('oculto');
+        } else {
+            chave.classList.add('oculto');
+        }
+    }
 </script>
 
-<p>Click the button to print the current page.</p>
-  
- 
-
-  
-<p><button onclick="window.print()">Save</button></p>
-
-===================================================
- <!-- //paragrafos de searacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
-<div style="padding-left:066px">
-<!-- //IDENTIFICADOR dropdown pay options>--> 
-
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
- </textarea>&nbsp;</div>
- 
-<div style="padding-left:066px">
-<p id="PLANOS"> &nbsp;</p>
-
- </textarea>&nbsp;</div>
- <div style="padding-left:86px">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<table>
-<tr><td><input type="hidden" name="on0" value="Suporte - Planejamento. Produção e Tecnolgia">Suporte - Planejamento. Produção e Tecnologia</td></tr><tr><td><select name="os0">
-	<option value="Mentoria 3 x Semana">Mentoria 3 x Semana : R$8.000,00 BRL - mensal</option>
-	<option value="Assessoria 2 x semana">Assessoria 2 x semana : R$4.000,00 BRL - mensal</option>
-	<option value="Cosultoria 1 x semana">Cosultoria 1 x semana : R$2.000,00 BRL - mensal</option>
-	<option value="Suporte Planejamentoo 2 x mes">Suporte Planejamentoo 2 x mes : R$960,00 BRL - mensal</option>
-	<option value="Suporte Decisão 2 x por mes">Suporte Decisão 2 x por mes : R$670,00 BRL - mensal</option>
-	<option value="Suporte Produção 2 x por mes">Suporte Produção 2 x por mes : R$550,00 BRL - mensal</option>
-	<option value="Suporte Tecnologia 1 x por mes">Suporte Tecnologia 1 x por mes : R$400,00 BRL - mensal</option>
-</select> </td></tr>
-</table>
-<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIKWQYJKoZIhvcNAQcEoIIKSjCCCkYCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAOgCu5p7nMObM3czM//sO7qPWUoRBtZ2KJagqN8HhXt/NYgcMWHznu3+cvWTPpneOtmrMnmrrE+KyIgSnXf7g6KYtIL3uXxP8i6/SnTQ2ikos0bM4IWDlJ8j8X4TydOwESJFsZK288LdppE9s975uA8O11bonQuowCPD7LgMC5gTELMAkGBSsOAwIaBQAwggPVBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECNMmqu0kIJu0gIIDsBASVQmxRcJqzBXzWrbE2P57y3hMDY5gKwHrN16ba6HYibn9K34KTQARA3wbJfL+M+qxrvSkGWCm4qujOBZhH1oxHxuvu6O1k7OVjutbgoBLMYVCzYeM4CGXYR9vb8u7/UGQrNlUm/WAFIkJ1YBOC3M7JyZw4D7L0kIlrlC2q0yoEy9D7UoHyvl9r5QCCA+gbYTQn94lkXsEBk+LWzlRQkxps6w1j3y6akmepDBZS2+wJv8XqpXV8a62ltjWfTs6IVAuqPAPdKMr6PjRFz+S6N2p3Ayw4kPNP6qjtVZC5ZBcj9rYBDOt2nZO5IJLWNmzubsOYDAGrQqzzCgLaURzfx3bjeT+wVBpfIc7iOBKW3LVCgAUquIDnT68go7vaqfd7j76AjO3+DyAgVO7Voahh2/88ERsonN8CJoGpp0h7x2EyJ699wjm81G/TsDcfvneXzssT+Lcw5anPxMD8wZt0BcApsf51hadlblKF8L9ldoUuECa1tH/4tuLHSn7p4kvtOrrqdegiy00L7rjamBpD71oTT0yicE2Gcbcrp0v31H6r7ZyjzfaV27xyTbeRWrIwMc3FgGtVE8NOFVWvJy/jgNboDZNPEvYwm3bVvxBm1JuQXxftJ0PC6FCPRCJCSoEFUUrB8dC9+jk7331xxPv0RtJ1cIdCzyhvujX3BPKSu+8a0GJXbsZiIP8dxKsrWWtREt+Nk4KR23d7TFp4NGU5bGem7saO/y79EQvcioRNElg+goePj7aFs51xWCud+GhsGeOxKMnbDS/DEk8GzvUXjBEZxzcAqInIJbqDgMQgsOteTrUQhOqrxmzgW1Rl2qoQKxJc2gFdpTEj+O3wKWcsTlof7X8nEw3meIxnkdAMJnju1hRsJvML2OZUPMxaJQUOwantvb/AZSW50KN/LoaRgzHvDxr+4kS4EBfgIkthENwOpvbOgPns1ZnAUqqCaA9rD3lWk7RfeRKqapl5lU9O1vQ0bOCtIq+XAQ4PS9QrYTAuRHRMLqCgRfoFpnLmX5H26Jvoc80FUl1A+3qTB/aP4521tEc6sse5P+guWdvaRfDl74Ab7TLycal3uvFnl89xWYeUbnsVxGhmUU8mbEvlyrz7UvTkhj6fjJ1IMfLF4/mhjL4LXEMCVz4+gOPcVbDGQFMz4GY9xstx2I1P5zHKpBbkopQdPT5owuGfzbZM9+jzNAZB6yodiwArvAmarlBVaTw+T9okHHvwwEQiCbpbhrx3POG5z2/DEQ84oIbB9oIoIIDhzCCA4MwggLsoAMCAQICAQAwDQYJKoZIhvcNAQEFBQAwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMB4XDTA0MDIxMzEwMTMxNVoXDTM1MDIxMzEwMTMxNVowgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBR07d/ETMS1ycjtkpkvjXZe9k+6CieLuLsPumsJ7QC1odNz3sJiCbs2wC0nLE0uLGaEtXynIgRqIddYCHx88pb5HTXv4SZeuv0Rqq4+axW9PLAAATU8w04qqjaSXgbGLP3NmohqM6bV9kZZwZLR/klDaQGo1u9uDb9lr4Yn+rBQIDAQABo4HuMIHrMB0GA1UdDgQWBBSWn3y7xm8XvVk/UtcKG+wQ1mSUazCBuwYDVR0jBIGzMIGwgBSWn3y7xm8XvVk/UtcKG+wQ1mSUa6GBlKSBkTCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb22CAQAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOBgQCBXzpWmoBa5e9fo6ujionW1hUhPkOBakTr3YCDjbYfvJEiv/2P+IobhOGJr85+XHhN0v4gUkEDI8r2/rNk1m0GA8HKddvTjyGw/XqXa+LSTlDYkqI8OwR8GEYj4efEtcRpRYBxV8KxAW93YDWzFGvruKnnLbDAF6VR5w/cCMn5hzGCAZowggGWAgEBMIGUMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbQIBADAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjAxMjIyMTYzMzQyWjAjBgkqhkiG9w0BCQQxFgQUwf8DZ7Qplwrc6ewUvPz5+9wx9RwwDQYJKoZIhvcNAQEBBQAEgYCoUDPhGCGuJMJAr3+Q5FVOugZoxVhMmkqCEV2ho1rjguLCJTn2FdJuVNSmWV/2muWryV7O7lU6y4J+IuJtsHUUn/NUFzermXmOSwKxrgji30PTn11cqcpBD4UlA293yRcCW/Osxbbyh+QYtyy4JMG8fyXXWUFkyoneJTAou7V+AQ==-----END PKCS7-----">
-
-<!--//paypal assinar desabilita code">
-<input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">
-
-
-<img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-
- <!-- //paragrafos de searacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
-
-<!--//paypal button and code">
--->
-
-<!--//apagar essa linha inteira para habilitar botal payipal<!--//
-<div id="smart-button-container">
-      <div style="text-align: center;">
-        <div id="paypal-button-container"></div>
-      </div>
-      
-
-  </textarea>opção&nbsp;</div>
-<p><p>
-
-
-   </div>
-  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
-  <script>
-    function initPayPalButton() {
-      paypal.Buttons({
-        style: {
-          shape: 'rect',
-          color: 'gold',
-          layout: 'vertical',
-          label: 'paypal',
-          
-        },
-
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"USD","value":1}}]
-          });
-        },
-
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-            alert('Transaction completed by ' + details.payer.name.given_name + '!');
-          });
-        },
-
-        onError: function(err) {
-          console.log(err);
-        }
-      }).render('#paypal-button-container');
-    }
-    initPayPalButton();
-  </script>
- <!-- //fim paypal code button">--> 
- 
-  </textarea>&nbsp;</div>
-  <p><p><p><p><p><p><p><p><p><p>
- <!-- //paragrafos de searacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
- </textarea>&nbsp;</div>
- <div style="padding-left:86px">
-<!-- INICIO DO BOTAO PAGSEGURO -->
-
-<p id="PAGTO"> &nbsp;</p>
-
-</textarea>&nbsp;</div>
- <p><p><p><p><p><p><p><p><p><p>
- <div style="padding-left:86px">
-<a href="https://pag.ae/7WKQq1_YR/button" target="_blank" title="Pagar com PagSeguro"><img src="//assets.pagseguro.com.br/ps-integration-assets/botoes/pagamentos/205x30-pagar-cinza.gif" alt="Pague com PagSeguro - é rápido, grátis e seguro!" /></a>
-
-
-<!-- FIM DO BOTAO PAGSEGURO -->
- <!-- //paragrafos de searacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
- <!-- //paragrafos de searacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p> </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p> </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
-<!-- //ANALISE DE PRIORIDADE template">-->
-<div style="padding-left:86px">
-<p id="FOCO">FOCO&nbsp;</p>
-<p><iframe allow="camera; microphone; fullscreen; display-capture" src="https://www.swotanalysis.com/35942/ANALISADOR-DE-PRIORIDADE-LBM" style="height: 800px; width: 100%; border: 0px;"></iframe></p>
-
-
- <!-- //paragrafos de separacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
-
-<!-- //problem">-->
-<div style="padding-left:86px">
-<p id="Problem">PROBLEM&nbsp;</p>
-<p><iframe allow="camera; microphone; fullscreen; display-capture" src="https://www.swotanalysis.com/35940/PROBLEM-SOLVING-LBM" style="height: 800px; width: 100%; border: 0px;"></iframe></p>
-
-
-
-
- <!-- //paragrafos de searacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
-
-<!-- //ANALISE SWOT">-->
-<div style="padding-left:86px">
-<p id="SWOT">SWOT&nbsp;</p>
-<p><iframe allow="camera; microphone; fullscreen; display-capture" src="https://www.swotanalysis.com/35933/SWOT-LBM" style="height: 800px; width: 100%; border: 0px;"></iframe></p>
-
-
- <!-- //paragrafos de separacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
-
-<!-- /ETO">--> 
-<div style="padding-left:86px">
-<p id="ETO">ETO&nbsp;</p>
-<p><iframe allow="camera; microphone; fullscreen; display-capture" src="https://www.swotanalysis.com/35537/ETO-LBM" style="height: 800px; width: 100%; border: 0px;"></iframe></p>
-
-
- <!-- //paragrafos de searacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
-
- <!-- //paragrafos de searacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
-</textarea>&nbsp;</div>
- <p><p><p><p><p><p><p><p><p><p>
- </textarea>&nbsp;</div>
- <p><p><p><p><p><p><p><p><p><p>
-<!-- //googlesheets fnw tempplate">--> 
-<div style="padding-left:86px">
-<p id="TABS">TABS&nbsp;</p><div class="video-wrapper"><iframe allowfullscreen="" class="mbr-embedded-video" frameborder="0" height="1420" src="https://docs.google.com/spreadsheets/d/1MCr9VFGAOjJTqGqphFDQr4s3eQbIGw8bdQ6hQZ1Dd2E/edit#gid=1932503803" width="1280"></iframe></div>
-</div>
-</div>
-
-<!-- //paragrafos de separacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
-<!-- //paragrafos de separacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
-<div style="padding-left:86px">
-MENU<!-- //paragrafos de separacao de linhas">--> 
-<!-- //link on page top">--> 
-<div class="mbr-section-btn"><a class="btn-underline mr-3 text-primary display-4" href="#top">top menu</a></div>
-</div>
-	<!-- //paragrafos de separacao de linhas">--> 	
-    </textarea>&nbsp;</div>
-
-<!-- //jitsi video conference">-->
-<div style="padding-left:86px">
-<p id="CALL">CALL&nbsp;</p><div
-<p><iframe allow="camera; microphone; fullscreen; display-capture" src="https://meet.jit.si/testelivelmsestudioyt" style="height: 500px; width: 100%; border: 0px;"></iframe></p>
-
-</div>
-
-<!-- //paragrafos de separacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
-
-
-<!-- //paragrafos de separacao de linhas">--> 
- </textarea>&nbsp;</div>
-<!-- //link on page top">--> 
-<div class="card-box">
-	<!-- //paragrafos de separacao de linhas">--> 	
-    </textarea>&nbsp;</div>
     
-<div style="padding-left:86px">					
-<div class="mbr-section-btn"><a class="btn-underline mr-3 text-primary display-4" href="#top">top menu</a></div>
-</div>
-
-</div>
-<div class="card col-12 col-md-4">
-<div class="card-img"><img src="assets/images/11.jpg" alt="">
-</div>
-<div class="card-box">
-
-
-<!-- //paragrafos de separacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>
-
-
-   
- <!-- //paragrafos de separacao de linhas">--> 
- </textarea>&nbsp;</div>
-<p><p><p><p><p><p><p><p><p><p>  
-
-
-
-
+    <!-- Continuar o padrão para os próximos botões -->
+    
+    <script>     
+       function toggleChave(numero) {
+            const chave = document.getElementById(`chave${numero}`);
+            if (chave.classList.contains('oculto')) {
+                chave.classList.remove('oculto');
+            } else {
+                chave.classList.add('oculto');
+            }
+        }
+    </script>
 </body>
 </html>
-
-">--> 
-
-
-
-
-
