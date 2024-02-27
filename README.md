@@ -1,2 +1,2 @@
 # fnw Connect Panel
-for Quiack Access
+for Quick Access
