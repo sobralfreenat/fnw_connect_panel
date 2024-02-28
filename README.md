@@ -1,8 +1,3 @@
-# fnw Connect Panel
-for Quick Access
+https://sobralfreenat.github.io/fnw_connect_panel/
 
-https://sobralfreenat.git.com/fnw_connect_panel
-
-. Viabiidade 360
-- Clac ticket MEdio
-(ajujstar tamanho do viewport
+Ajustar deslocamento para esquerda, considerando Margin right
