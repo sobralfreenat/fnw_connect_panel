@@ -30,8 +30,14 @@
             height: auto;
             position: fixed;
         }
+
+        /* Adicione este estilo para destacar a imagem clicada */
+        .botao-chave:focus img {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adapte o efeito conforme desejado */
+        }
     </style>
-</head>
+
+	</head>
 <body>
 
     <!-- Botão 11 -->
@@ -149,30 +155,38 @@
     <iframe src="https://sobralfreenat.github.io/Intervalos-Calculadora/" name="myiFrame" style="border: 0; width: 100%; height: 450px;"></iframe>
 </div>
 
-
 <script>     
-   function toggleChave(numero) {
-        const chave = document.getElementById(`chave${numero}`);
-        if (chave.classList.contains('oculto')) {
+  // function toggleChave(numero) {
+      //  const chave = document.getElementById(`chave${numero}`);
+     //   if (chave.classList.contains('oculto')) {
             chave.classList.remove('oculto');
-        } else {
-            chave.classList.add('oculto');
-        }
-    }
-</script>
+    //    } else {
+    //        chave.classList.add('oculto');
+    //    }
+    // }
+
 
     
     <!-- Continuar o padrão para os próximos botões -->
     
-    <script>     
-       function toggleChave(numero) {
+ 
+        function toggleChave(numero) {
             const chave = document.getElementById(`chave${numero}`);
+            const botao = document.getElementById(`botao-chave${numero}`);
             if (chave.classList.contains('oculto')) {
+                // Fecha todas as áreas e remove destaque de todos os botões
+                document.querySelectorAll('.chave').forEach(el => el.classList.add('oculto'));
+                document.querySelectorAll('.destaque').forEach(el => el.classList.remove('destaque'));
+                // Abre a área selecionada e destaca o botão correspondente
                 chave.classList.remove('oculto');
+                botao.classList.add('destaque');
             } else {
+                // Fecha a área e remove destaque do botão
                 chave.classList.add('oculto');
+                botao.classList.remove('destaque');
             }
         }
     </script>
 </body>
 </html>
+
