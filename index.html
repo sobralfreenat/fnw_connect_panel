@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -35,6 +36,12 @@
         .botao-chave:focus img {
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adapte o efeito conforme desejado */
         }
+
+		.destaque {
+        border: 2px solid gray;
+        margin-top: 5px; /* Espaço entre a imagem e o destaque */
+    }	
+	
     </style>
 
 	</head>
@@ -171,21 +178,23 @@
     
  
         function toggleChave(numero) {
-            const chave = document.getElementById(`chave${numero}`);
-            const botao = document.getElementById(`botao-chave${numero}`);
-            if (chave.classList.contains('oculto')) {
-                // Fecha todas as áreas e remove destaque de todos os botões
-                document.querySelectorAll('.chave').forEach(el => el.classList.add('oculto'));
-                document.querySelectorAll('.destaque').forEach(el => el.classList.remove('destaque'));
-                // Abre a área selecionada e destaca o botão correspondente
-                chave.classList.remove('oculto');
-                botao.classList.add('destaque');
-            } else {
-                // Fecha a área e remove destaque do botão
-                chave.classList.add('oculto');
-                botao.classList.remove('destaque');
-            }
+        const chave = document.getElementById(`chave${numero}`);
+        const botao = document.getElementById(`botao-chave${numero}`);
+
+        if (chave.classList.contains('oculto')) {
+            document.querySelectorAll('.chave').forEach(el => {
+                el.classList.add('oculto');
+                document.getElementById(`botao-chave${el.id.replace('chave', '')}`).classList.remove('destaque');
+            });
+            chave.classList.remove('oculto');
+            botao.classList.add('destaque');
+        } else {
+            chave.classList.add('oculto');
+            botao.classList.remove('destaque');
         }
+    }
+
+        
     </script>
 </body>
 </html>
