@@ -1,4 +1,4 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <style>
@@ -14,6 +14,23 @@
         .oculto {
             display: none;
         }
+
+.chave {
+    padding: 15px; /* Adapte o valor conforme necessário */
+    margin-bottom: 20px; /* Adapte o valor conforme necessário */
+    resize: both; /* Permite redimensionar a janela da área */
+    overflow: auto; /* Adiciona barras de rolagem caso a área seja redimensionada */
+    max-width: 100%; /* Define a largura máxima para que a área não ultrapasse a largura da janela do navegador */
+    max-height: 100%; /* Define a altura máxima para que a área não ultrapasse a altura da janela do navegador */
+}
+
+				
+		.chave {
+    padding: 15px; /* Adapte o valor conforme necessário */
+    margin-bottom: 20px; /* Adapte o valor conforme necessário */
+    resize: both; /* Permite redimensionar a janela da área */
+    overflow: auto; /* Adiciona barras de rolagem caso a área seja redimensionada */
+}
         .chave {
             background-color: #ffffff;
             padding: 25px;
@@ -21,6 +38,8 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
             height: auto;
             opacity: 0.8;
+
+
 
         }
         .botao-chave {
@@ -30,13 +49,25 @@
             height: auto;
             position: fixed;
         }
+
+        /* Adicione este estilo para destacar a imagem clicada */
+        .botao-chave:focus img {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adapte o efeito conforme desejado */
+        }
+
+		.destaque {
+        border: 2px solid gray;
+        margin-top: 5px; /* Espaço entre a imagem e o destaque */
+    }	
+	
     </style>
-</head>
+
+	</head>
 <body>
 
     <!-- Botão 11 -->
 <button id="botao-chave11" class="botao-chave" style="bottom: 50px; right: calc(103% - 10*1vw);" onclick="toggleChave(11)" title="Registro de Tarefa Tempo - Fato: A capacidade de registrar e analisar o tempo gasto em diferentes tarefas pode revelar insights valiosos sobre a eficiência operacional e identificar áreas para otimização.">
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65ce67b491eff_FNWfreenatstoreLogodownload.jpg" alt="11" style="width: 70px; height: auto; margin-right: 5px;">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65f85ca19ba2a_RegistroTarefaTempo.png" alt="11" style="width: 70px; height: auto; margin-right: 5px;">
 </button>
 
 <!-- Área para exibir a chave 11 (inicialmente oculta) -->
@@ -48,7 +79,7 @@
     
     <!-- Botão 1 Viabilidade 360 -->
 <button id="botao-chave1" class="botao-chave" style="bottom: 50px; right: calc(97% - 10*1vw);" onclick="toggleChave(1)" title="Viabilidade 360 - Fato: A análise abrangente de viabilidade, considerando diversos aspectos como financeiro, técnico e de mercado, é essencial para tomar decisões estratégicas informadas.">
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65d82286182f9_viabilidde360source.png" alt="01" style="width: 55px; height: auto; margin-right: 5px;">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65f89b207e2d1_Viablidade360.png" alt="01" style="width: 55px; height: auto; margin-right: 5px;">
 </button>
 
 <!-- Área para exibir a chave 1 (inicialmente oculta) Viabilidade 360 -->
@@ -131,7 +162,7 @@
 
 <!-- Botão 9 -->
 <button id="botao-chave9" class="botao-chave" style="bottom: 50px; right: calc(20% - 10*1vw);" onclick="toggleChave(9)" title="Alinhamento Periódico - Fato: Manter um alinhamento periódico entre as estratégias de curto e longo prazo da empresa é crucial para garantir a consistência e o sucesso a longo prazo.">
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65f7af6858168_AlinhamentoPeriodico.png" alt="09" style="width: 70px; height: auto; margin-right: 5px;">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65f85200b09fb_AlinhamentoPeriodico.png" alt="09" style="width: 70px; height: auto; margin-right: 5px;">
 </button>
 
 <!-- Área para exibir a chave 9 (inicialmente oculta) -->
@@ -141,7 +172,7 @@
 
 <!-- Botão 10 -->
 <button id="botao-chave10" class="botao-chave" style="bottom: 50px; right: calc(12% - 10*1vw);" onclick="toggleChave(10)" title="Calculadora de Intervalos - Fato: Utilizar uma calculadora de intervalos permite prever com precisão os prazos de entrega de projetos, melhorando a gestão do tempo e a satisfação do cliente.">
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65f66764d16e8_CalcINtervalos.png" alt="10" style="width: 70px; height: auto; margin-right: 5px;">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65f86d6b6d795_CalcINtervalos.png" alt="10" style="width: 70px; height: auto; margin-right: 5px;">
 </button>
 
 <!-- Área para exibir a chave 10 (inicialmente oculta) -->
@@ -149,30 +180,50 @@
     <iframe src="https://sobralfreenat.github.io/Intervalos-Calculadora/" name="myiFrame" style="border: 0; width: 100%; height: 450px;"></iframe>
 </div>
 
+<!-- Botão 12 -->
+<button id="botao-chave12" class="botao-chave" style="bottom: 900px; right: calc(103% - 10*1vw);" onclick="toggleChave(12)" title="MKT- Segmento / Nicho - Fato: A capacidade de identificar e analisar diferentes segmentos ou nichos revela oportunidades valiosas sobre a eficiência estratégica para produtos, mensagem e oferta.">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65f85ca19ba2a_RegistroTarefaTempo.png" alt="11" style="width: 70px; height: auto; margin-right: 5px;">
+</button>
+
+<!-- Área para exibir a chave 12 (inicialmente oculta) -->
+<div id="chave12" class="chave oculto" onclick="toggleChave(12)" style="bottom: 130px; right: calc(103% - 10*1vw);" title="Registro de Tarefa Tempo">
+    <iframe src="https://pt-br.minea.com/produits/ferramentas-encontrar-produtos-vencedores" name="myiFrame" style="border: 0; width: 100%; height: 450px;"></iframe>
+</div>
+
 
 <script>     
-   function toggleChave(numero) {
-        const chave = document.getElementById(`chave${numero}`);
-        if (chave.classList.contains('oculto')) {
+  // function toggleChave(numero) {
+      //  const chave = document.getElementById(`chave${numero}`);
+     //   if (chave.classList.contains('oculto')) {
             chave.classList.remove('oculto');
-        } else {
-            chave.classList.add('oculto');
-        }
-    }
-</script>
+    //    } else {
+    //        chave.classList.add('oculto');
+    //    }
+    // }
+
 
     
     <!-- Continuar o padrão para os próximos botões -->
     
-    <script>     
-       function toggleChave(numero) {
-            const chave = document.getElementById(`chave${numero}`);
-            if (chave.classList.contains('oculto')) {
-                chave.classList.remove('oculto');
-            } else {
-                chave.classList.add('oculto');
-            }
+ 
+        function toggleChave(numero) {
+        const chave = document.getElementById(`chave${numero}`);
+        const botao = document.getElementById(`botao-chave${numero}`);
+
+        if (chave.classList.contains('oculto')) {
+            document.querySelectorAll('.chave').forEach(el => {
+                el.classList.add('oculto');
+                document.getElementById(`botao-chave${el.id.replace('chave', '')}`).classList.remove('destaque');
+            });
+            chave.classList.remove('oculto');
+            botao.classList.add('destaque');
+        } else {
+            chave.classList.add('oculto');
+            botao.classList.remove('destaque');
         }
+    }
+
+        
     </script>
 </body>
 </html>
