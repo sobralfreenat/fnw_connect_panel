@@ -18,19 +18,21 @@
 
 
 				
-		.chave {
-    padding: 15px; /* Adapte o valor conforme necessário */
-    margin-bottom: 20px; /* Adapte o valor conforme necessário */
-    resize: both; /* Permite redimensionar a janela da área */
-    overflow: auto; /* Adiciona barras de rolagem caso a área seja redimensionada */
-}
+		 /* Estilos para a área chave */
         .chave {
-            background-color: #ffffff;
-            padding: 25px;
+            background-color: #ffffFF;
             border-radius: 11px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
-            height: auto;
-            opacity: 0.8;
+            cursor: move;
+            opacity: 0.7;
+            position: absolute;
+            top: 110px;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            resize: both;
+            overflow: auto;
+        }
 
 
 
@@ -52,7 +54,24 @@
         border: 2px solid gray;
         margin-top: 5px; /* Espaço entre a imagem e o destaque */
     }	
-	
+	/* Estilos para os botões */
+        .botao-chave {
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            opacity: 0.7;
+            height: auto;
+            position: fixed;
+        }
+
+        /* Efeito de destaque ao clicar no botão */
+        .botao-chave:focus img {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .destaque {
+            border: 2px solid gray;
+            margin-top: 5px;
+        }
     </style>
 
 	</head>
@@ -172,6 +191,57 @@
 <div id="chave10" class="chave oculto" onclick="toggleChave(10)" style="bottom: 130px; right: calc(12% - 10*1vw);" title="Calculadora de Intervalos">
     <iframe src="https://sobralfreenat.github.io/Intervalos-Calculadora/" name="myiFrame" style="border: 0; width: 100%; height: 450px;"></iframe>
 </div>
+
+<!-- Botão 12 -->
+<button id="botao-chave12" class="botao-chave" style="bottom: 900px; right: calc(103% - 10*1vw);" onclick="toggleChave(12)" title="MKT- Segmento / Nicho - Fato: A capacidade de identificar e analisar diferentes segmentos ou nichos revela oportunidades valiosas sobre a eficiência estratégica para produtos, mensagem e oferta.">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65fcb5b64ac40_FerramentasProdutosVencedores.jpg" alt="12" style="width: 70px; height: auto; margin-right: 5px;">
+</button>
+
+<!-- Área para exibir a chave 12 (inicialmente oculta) -->
+<div id="chave12" class="chave oculto" onclick="toggleChave(12)" style="bottom: 130px; right: calc(103% - 10*1vw);" title="Registro de Tarefa Tempo">
+    <iframe src="https://pt-br.minea.com/produits/ferramentas-encontrar-produtos-vencedores" name="myiFrame" style="border: 0; width: 100%; height: 450px;"></iframe>
+</div>
+
+<!-- Botão 13 -->
+<button id="botao-chave13" class="botao-chave" style="bottom: 900px; right: calc(93% - 10*1vw);" onclick="toggleChave(13)" title="MKT- Concorrência - Fato: A capacidade de identificar e analisar diferentes concorrentes revela oportunidades valiosas sobre a eficiência estratégica para produtos, mensagem e oferta.">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65fcb5f5556c8_FerramentasTrafegoeConcorrencia.jpg" alt="13" style="width: 70px; height: auto; margin-right: 5px;">
+</button>
+
+<!-- Área para exibir a chave 13 (inicialmente oculta) -->
+<div id="chave13" class="chave oculto" onclick="toggleChave(13)" style="bottom: 130px; right: calc(93% - 10*1vw);" title="Identificação Palavras-Chave a">
+    <iframe src="https://neilpatel.com/br/ubersuggest/" name="myiFrame" style="border: 0; width: 100%; height: 450px;"></iframe>
+</div>
+
+<!-- Botão 14 -->
+<button id="botao-chave14" class="botao-chave" style="bottom: 900px; right: calc(83% - 10*1vw);" onclick="toggleChave(14)" title="MKT- Concorrência - Fato: A capacidade de identificar e analisar diferentes concorrentes revela oportunidades valiosas sobre a eficiência estratégica para produtos, mensagem e oferta.">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65fcb65de7a15_CalculadoradeMidia.jpg" alt="14" style="width: 70px; height: auto; margin-right: 5px;">
+</button>
+
+<!-- Área para exibir a chave 14 (inicialmente oculta) -->
+<div id="chave14" class="chave oculto" onclick="toggleChave(14)" style="bottom: 130px; right: calc(83% - 10*1vw);" title="Identificação Palavras-Chave b">
+    <iframe src="https://www.calculadorademidia.com/" name="myiFrame" style="border: 0; width: 100%; height: 450px;"></iframe>
+</div>
+
+<!-- Botão 15 -->
+<button id="botao-chave15" class="botao-chave" style="bottom: 900px; right: calc(73% - 10*1vw);" onclick="toggleChave(15)" title="MKT- Leads - Fato: A capacidade de identificar e analisar Perfis Empresariais (b2B) revela oportunidades valiosas sobre a eficiência estratégica para produtos, mensagem e oferta.">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65fcb6ec4a360_LEadsINtexifyLogin.jpg" alt="15" style="width: 70px; height: auto; margin-right: 5px;">
+</button>
+
+<!-- Área para exibir a chave 15 (inicialmente oculta) -->
+<div id="chave15" class="chave oculto" onclick="toggleChave(15)" style="bottom: 130px; right: calc(73% - 10*1vw);" title="Identificação Leads">
+    <iframe src="https://app.intexfy.com/auth/login" name="myiFrame" style="border: 0; width: 100%; height: 450px;"></iframe>
+</div>
+
+<!-- Botão 16 -->
+<button id="botao-chave16" class="botao-chave" style="bottom: 900px; right: calc(63% - 10*1vw);" onclick="toggleChave(16)" title="MKT- MAP SP MG - Fato: A capacidade de identificar e analisar Oportunidades valiosas em territórios  e regiões melhora a eficiência estratégica para produtos, mensagem e oferta.">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/6682800/65fcb7117c89d_MAPAandTOOLS.jpg" alt="16" style="width: 70px; height: auto; margin-right: 5px;">
+</button>
+
+<!-- Área para exibir a chave 16 (inicialmente oculta) -->
+<div id="chave16" class="chave oculto" onclick="toggleChave(16)" style="bottom: 130px; right: calc(63% - 10*1vw);" title="Identificação Oportuniades em Territórios">
+    <iframe src="https://lab-freenat.systeme.io/freenatwork/mapa-sp-150" name="myiFrame" style="border: 0; width: 100%; height: 450px;"></iframe>
+</div>
+
 
 <script>     
   // function toggleChave(numero) {
